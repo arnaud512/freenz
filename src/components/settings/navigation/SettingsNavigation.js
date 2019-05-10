@@ -61,7 +61,6 @@ export default @inject('stores') @observer class SettingsNavigation extends Comp
   render() {
     const { serviceCount, workspaceCount, stores } = this.props;
     const { isDarkThemeActive } = stores.ui;
-    const { router, user } = stores;
     const { intl } = this.context;
 
     return (
