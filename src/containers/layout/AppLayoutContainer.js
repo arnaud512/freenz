@@ -19,7 +19,6 @@ import Sidebar from '../../components/layout/Sidebar';
 import Services from '../../components/services/content/Services';
 import AppLoader from '../../components/ui/AppLoader';
 
-import { state as delayAppState } from '../../features/delayApp';
 import { workspaceActions } from '../../features/workspaces/actions';
 import WorkspaceDrawer from '../../features/workspaces/components/WorkspaceDrawer';
 import { workspaceStore } from '../../features/workspaces';
@@ -150,7 +149,6 @@ export default @inject('stores', 'actions') @observer class AppLayoutContainer e
           retryRequiredRequests={retryRequiredRequests}
           areRequiredRequestsLoading={requests.areRequiredRequestsLoading}
           darkMode={settings.all.app.darkMode}
-          isDelayAppScreenVisible={delayAppState.isDelayAppScreenVisible}
           isAnnouncementVisible={announcementsStore.isAnnouncementVisible}
         >
           {React.Children.count(children) > 0 ? children : null}
